@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Shiny App</title>
+	<meta name="description" content="Shiny App">
+	<meta name="author" content="">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />    
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Introduction</h3>
+  <p>This slidify presentation describes the shiny application I have created for the Coursera Course &#39;Developing Data Products&#39;.</p>
+
+<p>It uses the EuStockMarket dataset in R, kindly provided by Erste Bank AG, Vienna, Austria. </p>
+
+</article>
+
+<article class="" id="slide-2" style="background:;">
+  <h3>Background</h3>
+  <p>The value of the stock market is of great interest to many businesses and financiers. However, with so much data available on the values of stockmarkets it can be difficult to find out how these markets have changed in value over the years.</p>
+
+<p>This shiny app aims to assist with this.</p>
+
+</article>
+
+<article class="" id="slide-3" style="background:;">
+  <h3>Input</h3>
+  <p>This shiny app uses the EuStockMarkets dataset contained within the datasets package in R. </p>
+
+<p>First, the user selects a market from the dropdown menu. The options are &quot;DAX&quot;, &quot;SMI&quot;, &quot;CAC&quot; and &quot;FTSE&quot;.</p>
+
+</article>
+
+<article class="" id="slide-4" style="background:;">
+  <h3>Output 1</h3>
+  <p>The value of the market over time is then plotted on the right of the screen. Let&#39;s assume &quot;FTSE&quot; was chosen.</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</article>
+
+<article class="" id="slide-5" style="background:;">
+  <h3>Output 2</h3>
+  <p>Underneath the plot, a summary of the minimum, maximum, median  and 1st and 3rd quartiles of the value of this market are shown.</p>
+
+<pre><code class="r">library(datasets)
+index=&quot;FTSE&quot;
+dataset &lt;- EuStockMarkets[,index]
+summary(dataset)
+</code></pre>
+
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    2281    2843    3247    3566    3994    6179
+</code></pre>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
